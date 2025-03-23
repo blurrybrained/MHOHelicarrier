@@ -3,7 +3,6 @@
 *I am not sure if the signup page ever worked, if it just doesn't work on my computer, if I'm being stupid, or what's up with that, but it's not a priority for me as it can be done in the server console.
 
 *Todo 
-- add the new PatchManager files
 - learn git and reference 'https://github.com/Crypto137/MHServerEmuWebAssets' in the web dir to keep it up do date (Not sure if this is the best way, but I'll figgure it out as i go along x)
 - probably something more, but I can't remember right now :D
 
@@ -127,4 +126,11 @@ Omega. If everything is set up correctly, the game should launch into Avengers T
 
 When you're done playing, quit out of Marvel Heroes Omega and switch to MHO Server. Either set up a controller shortcut for the B button to hit CTRL-C or hit the STEAM button and press "Exit Game" on MHO Server.
 
+### Modifying Config Files
 
+By default `data/Config.IgnoreSessionToken.JSON.ini` is used, you can change between some presets in `Dockerfile` or edit the file in data/ directly.
+I've made them to be config overrides so you just add the sections you want from https://github.com/Crypto137/MHServerEmu/blob/master/src/MHServerEmu/Config.ini, which has the complete list of config.ini options. (You need to also add the [] section above if you're adding from a section that isn't allready in the file)
+
+For some extra seasonal loot you can enable them in data/PatchDataSpecialEvents.json, I will try to keep it up to date, if not the source version can be found https://github.com/Crypto137/MHServerEmu/blob/master/src/MHServerEmu.Games/Data/Game/Patches/PatchDataSpecialEvents.json, you can just copy from there if something new gets added I've not updated yet.
+
+**Note, you need to rebuild the image for config changes to get applied
