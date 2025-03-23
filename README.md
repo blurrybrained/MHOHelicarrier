@@ -1,3 +1,11 @@
+*Note, this is a fork aiming to make the project installable again without modification, I am not knowledgable in  the tools, but the main repo hasn't been touched in a while and I think it's a handy project.
+*I am not sure if the signup page ever worked, if it just doesn't work on my computer or what's up with that, but it's not a priority for me as it can be done in the server console.
+
+*Todo 
+- add the new PatchManager files
+- learn git and reference 'https://github.com/Crypto137/MHServerEmuWebAssets' in the web dir to keep it up do date (Not sure if this is the best way, but I'll figgure it out as i go along x)
+- probably something more, but I can't remember right now :D
+
 # MHO Helicarrier
 
 This project aims to containerize the MHServerEmu server so it can be run on any computer easily

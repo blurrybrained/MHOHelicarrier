@@ -1,7 +1,7 @@
 FROM docker.io/library/alpine
 
 RUN apk update
-RUN apk add git dotnet6-sdk sqlite caddy bash curl
+RUN apk add git dotnet8-sdk sqlite caddy bash curl
 
 RUN mkdir /mho
 
@@ -23,16 +23,17 @@ RUN dotnet build MHServerEmu.sln
 WORKDIR /mho
 
 # Copy the necessary files over
-COPY data/Calligraphy.sip /mho/MHServerEmu/src/MHServerEmu/bin/x64/Debug/net6.0/Data/Game/
-COPY data/mu_cdata.sip /mho/MHServerEmu/src/MHServerEmu/bin/x64/Debug/net6.0/Data/Game/
+COPY data/Calligraphy.sip /mho/MHServerEmu/src/MHServerEmu/bin/x64/Debug/net8.0/Data/Game/
+COPY data/mu_cdata.sip /mho/MHServerEmu/src/MHServerEmu/bin/x64/Debug/net8.0/Data/Game/
 
 # Copy the configuration
-COPY data/Config.IgnoreSessionToken.JSON.ini /mho/MHServerEmu/src/MHServerEmu/bin/x64/Debug/net6.0/Config.ini
-# COPY data/Config.IgnoreSessionToken.ini /mho/MHServerEmu/src/MHServerEmu/bin/x64/Debug/net6.0/Config.ini
-# COPY data/Config.Default.ini /mho/MHServerEmu/src/MHServerEmu/bin/x64/Debug/net6.0/Config.ini
+ COPY data/Config.IgnoreSessionToken.JSON.ini /mho/MHServerEmu/src/MHServerEmu/bin/x64/Debug/net8.0/ConfigOverride.ini
+# COPY data/Config.IgnoreSessionToken.ini /mho/MHServerEmu/src/MHServerEmu/bin/x64/Debug/net8.0/ConfigOverride.ini
+# COPY data/Config.Default.ini /mho/MHServerEmu/src/MHServerEmu/bin/x64/Debug/net8.0/ConfigOverride.ini
+# COPY data/Config.Custom.ini /mho/MHServerEmu/src/MHServerEmu/bin/x64/Debug/net8.0/ConfigOverride.ini
 
 # Copy Linux SQLite interop files
-ADD data/sqlite/* /mho/MHServerEmu/src/MHServerEmu/bin/x64/Debug/net6.0/
+ADD data/sqlite/* /mho/MHServerEmu/src/MHServerEmu/bin/x64/Debug/net8.0/
 
 # Copy necessary files to host the server
 ADD web/ /mho/web
