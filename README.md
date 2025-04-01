@@ -4,6 +4,8 @@
 
 *Todo 
 - learn git and reference 'https://github.com/Crypto137/MHServerEmuWebAssets' in the web dir to keep it up do date (Not sure if this is the best way, but I'll figgure it out as i go along x)
+- Look into LiveTuning and symlinking instead of copying files to modify livetuning without a rebuild
+- restructure dirs to avoid mess with the new additions
 - probably something more, but I can't remember right now :D
 
 # MHO Helicarrier
@@ -128,9 +130,9 @@ When you're done playing, quit out of Marvel Heroes Omega and switch to MHO Serv
 
 ### Modifying Config Files
 
-By default `data/Config.IgnoreSessionToken.JSON.ini` is used, you can change between some presets in `Dockerfile` or edit the file in data/ directly.
-I've made them to be config overrides so you just add the sections you want from https://github.com/Crypto137/MHServerEmu/blob/master/src/MHServerEmu/Config.ini, which has the complete list of config.ini options. (You need to also add the [] section above if you're adding from a section that isn't allready in the file)
+By default `data/config.ini/Config.IgnoreSessionToken.JSON.ini` is used, you can change between some presets in `Dockerfile` or edit the files in data/config.nini/ directly.
+I've made them to be config overrides so you just add the sections you want from https://github.com/Crypto137/MHServerEmu/blob/master/src/MHServerEmu/Config.ini, which has the complete list of config.ini options. (You need to also add the [] section above if you're adding from a section that isn't already in the file)
 
-For some extra seasonal loot you can enable them in data/PatchDataSpecialEvents.json, I will try to keep it up to date, if not the source version can be found https://github.com/Crypto137/MHServerEmu/blob/master/src/MHServerEmu.Games/Data/Game/Patches/PatchDataSpecialEvents.json, you can just copy from there if something new gets added I've not updated yet.
+For some extra seasonal loot you can enable them in data/PatchDataSpecialEvents.json, I will try to keep it up to date, if not the source version can be found https://github.com/Crypto137/MHServerEmu/blob/master/src/MHServerEmu.Games/Data/Game/Patches/PatchDataSpecialEvents.json, you can just copy from there if something new gets added I've not updated yet. (It seems like nothing breaks if you enable them all, but I can't guarrantee that)
 
-**Note, you need to rebuild the image for config changes to get applied
+***Note, you need to rebuild the image for config changes to get applied**

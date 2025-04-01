@@ -27,10 +27,10 @@ COPY data/Calligraphy.sip /mho/MHServerEmu/src/MHServerEmu/bin/x64/Debug/net8.0/
 COPY data/mu_cdata.sip /mho/MHServerEmu/src/MHServerEmu/bin/x64/Debug/net8.0/Data/Game/
 
 # Copy the configuration
-COPY data/Config.IgnoreSessionToken.JSON.ini /mho/MHServerEmu/src/MHServerEmu/bin/x64/Debug/net8.0/ConfigOverride.ini
-#COPY data/Config.IgnoreSessionToken.ini /mho/MHServerEmu/src/MHServerEmu/bin/x64/Debug/net8.0/ConfigOverride.ini
-#COPY data/Config.Default.ini /mho/MHServerEmu/src/MHServerEmu/bin/x64/Debug/net8.0/ConfigOverride.ini
-#COPY data/Config.Custom.ini /mho/MHServerEmu/src/MHServerEmu/bin/x64/Debug/net8.0/ConfigOverride.ini
+COPY data/config.ini/Config.IgnoreSessionToken.JSON.ini /mho/MHServerEmu/src/MHServerEmu/bin/x64/Debug/net8.0/ConfigOverride.ini
+#COPY data/config.ini/Config.IgnoreSessionToken.ini /mho/MHServerEmu/src/MHServerEmu/bin/x64/Debug/net8.0/ConfigOverride.ini
+#COPY data/config.ini/Config.Default.ini /mho/MHServerEmu/src/MHServerEmu/bin/x64/Debug/net8.0/ConfigOverride.ini
+#COPY data/config.ini/Config.Custom.ini /mho/MHServerEmu/src/MHServerEmu/bin/x64/Debug/net8.0/ConfigOverride.ini
 
 # Copy PatchManager
 COPY data/PatchDataSpecialEvents.json  /mho/MHServerEmu/src/MHServerEmu/bin/x64/Debug/net8.0/Data/Game/Patches/PatchDataSpecialEvents.json
