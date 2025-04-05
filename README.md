@@ -73,7 +73,7 @@ To shut down the server, hit CTRL-C in the terminal. This will end the server se
 ##### Patching the client
 The client needs to be patched before it can connect to our server. 
 
-* @TobiX made an easier tool to do this https://tobix.github.io/mh-linux-patch/ 
+* @TobiX made an online patcher for ease of use https://tobix.github.io/mh-linux-patch/ 
 
 Or you can do it by download GHex from the Discovery store in Desktop Mode on the Steam Deck. Find
 MarvelHeroesOmega.exe in your Marvel Heroes installation (`UnrealEngine3/Binaries/Win64`), make a backup copy, and open the original with GHex. In the
