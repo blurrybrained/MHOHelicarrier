@@ -71,7 +71,7 @@ To shut down the server, hit CTRL-C in the terminal. This will end the server se
 #### Steam Deck-specific Instructions
 
 ##### Patching the client
-As of Wine version 10.6 and Proton Experimental 2025-06-05, this is no longer needed
+As of Wine version 10.6 and Proton Experimental 2025-06-05, this is no longer needed, and should just work without any modification
 
 <strike>The client needs to be patched before it can connect to our server. 
 
