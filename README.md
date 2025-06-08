@@ -72,6 +72,7 @@ To shut down the server, hit CTRL-C in the terminal. This will end the server se
 
 ##### Patching the client
 As of Wine version 10.6 and Proton Experimental 2025-06-05, this is no longer needed
+
 <strike>The client needs to be patched before it can connect to our server. 
 
 * @TobiX made an online patcher for ease of use https://tobix.github.io/mh-linux-patch/ 
